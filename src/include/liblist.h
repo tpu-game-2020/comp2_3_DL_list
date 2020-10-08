@@ -1,6 +1,6 @@
 #pragma once
 
-// C++ ‚ÅC‚Ìƒ‰ƒCƒuƒ‰ƒŠ‚ğg‚¤‚Æ‚«‚Ì‚¨‚Ü‚¶‚È‚¢
+// C++ ã§Cã®ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã‚’ä½¿ã†ã¨ãã®ãŠã¾ã˜ãªã„
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -17,26 +17,30 @@ extern "C" {
 	}list;
 
 
-	// æ“ª‚Édata‚Ì’l‚ğ‚Âƒm[ƒh‚ğ’Ç‰Á‚·‚é
+	// å…ˆé ­ã«dataã®å€¤ã‚’æŒã¤ãƒãƒ¼ãƒ‰ã‚’è¿½åŠ ã™ã‚‹
 	void add_front(list* l, int data);
 
-	// ––”ö‚Édata‚Ì’l‚ğ‚Âƒm[ƒh‚ğ’Ç‰Á‚·‚é
+	// æœ«å°¾ã«dataã®å€¤ã‚’æŒã¤ãƒãƒ¼ãƒ‰ã‚’è¿½åŠ ã™ã‚‹
 	void add_back(list* l, int data);
 	
-	// p‚ÌŒã‚Ìƒm[ƒh‚ğæ“¾‚·‚é
+	// pã®å¾Œã®ãƒãƒ¼ãƒ‰ã‚’å–å¾—ã™ã‚‹
 	node* get_next(node* p);
 
-	// p‚Ì‘O‚Ìƒm[ƒh‚ğæ“¾‚·‚é
+	// pã®å‰ã®ãƒãƒ¼ãƒ‰ã‚’å–å¾—ã™ã‚‹
 	node* get_prev(node* p);
 
-	// ƒm[ƒh‚ğæ‚èœ‚­i¡‰ñ‚Íƒƒ‚ƒŠ‰ğ•ú‚às‚¤j
+	// ãƒãƒ¼ãƒ‰ã‚’å–ã‚Šé™¤ãï¼ˆä»Šå›ã¯ãƒ¡ãƒ¢ãƒªè§£æ”¾ã‚‚è¡Œã†ï¼‰
 	node* depend(node* p, list* l);
 
-	// g—pƒƒ‚ƒŠ‚Ì‘S‰ğ•ú
-	void delete_all(list* p);
+	// ä½¿ç”¨ãƒ¡ãƒ¢ãƒªã®å…¨è§£æ”¾
+	void delete_all(list* l);
 
-
-// C++ ‚ÅC‚Ìƒ‰ƒCƒuƒ‰ƒŠ‚ğg‚¤‚Æ‚«‚Ì‚¨‚Ü‚¶‚È‚¢
+	void initialize_list(list* l)
+	{
+		l->head = ;->tail = NULL;
+	}
+	
+// C++ ã§Cã®ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã‚’ä½¿ã†ã¨ãã®ãŠã¾ã˜ãªã„
 #ifdef __cplusplus
 } // extern "C"
 #endif
