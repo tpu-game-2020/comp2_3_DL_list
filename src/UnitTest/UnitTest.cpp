@@ -20,6 +20,7 @@ namespace UnitTest
 	{
 	public:
 		
+		// 先頭要素へ追加
 		TEST_METHOD(front_added)
 		{
 			list l;
@@ -30,7 +31,7 @@ namespace UnitTest
 			delete_all(&l);
 		}
 
-		// 最後のノードはNULL
+		// 最終要素へ追加
 		TEST_METHOD(back_added)
 		{
 			list l;
@@ -42,7 +43,7 @@ namespace UnitTest
 			delete_all(&l);
 		}
 
-		// 最初の前ノードはNULL
+		// 次の要素を取得してみる
 		TEST_METHOD(next_get)
 		{
 			list l;
@@ -55,7 +56,7 @@ namespace UnitTest
 			delete_all(&l);
 		}
 
-		// 最初の前ノードはNULL
+		// 前の要素を取得してみる
 		TEST_METHOD(prev_get)
 		{
 			list l;
@@ -69,7 +70,7 @@ namespace UnitTest
 		}
 
 
-		// 最初の前ノードはNULL
+		// 真ん中の要素を抜いてみる
 		TEST_METHOD(middle_node_depended)
 		{
 			list l;
