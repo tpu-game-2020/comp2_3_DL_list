@@ -35,10 +35,8 @@ extern "C" {
 	// 使用メモリの全解放
 	void delete_all(list* l);
 
-	void initialize_list(list* l)
-	{
-		l->head = l->tail = NULL;
-	}
+	// リストの初期化
+	void initialize_list(list* l);
 	
 // C++ でCのライブラリを使うときのおまじない
 #ifdef __cplusplus
