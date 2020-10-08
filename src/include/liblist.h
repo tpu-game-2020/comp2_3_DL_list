@@ -37,7 +37,7 @@ extern "C" {
 
 	void initialize_list(list* l)
 	{
-		l->head = ;->tail = NULL;
+		l->head = l->tail = NULL;
 	}
 	
 // C++ でCのライブラリを使うときのおまじない
