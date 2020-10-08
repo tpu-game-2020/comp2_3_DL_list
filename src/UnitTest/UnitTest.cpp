@@ -1,6 +1,6 @@
 #include "pch.h"
 
-// ���������[�N�̃L���v�`��
+// メモリリークのキャプチャ
 #define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>
 #include <crtdbg.h>
@@ -13,7 +13,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 namespace UnitTest
 {
 	TEST_MODULE_CLEANUP(test_module_cleanup) {
-		Assert::IsFalse(_CrtDumpMemoryLeaks());// ���������[�N�`�F�b�N
+		Assert::IsFalse(_CrtDumpMemoryLeaks());// メモリリークチェック
 	}
 
 	TEST_CLASS(UnitTest)
@@ -23,16 +23,18 @@ namespace UnitTest
 		TEST_METHOD(front_added)
 		{
 			list l;
+			initialize_list(&l);
 			add_front(&l, 1);
 			Assert::AreEqual(1, l.head->data);
 
 			delete_all(&l);
 		}
 
-		// �Ō�̃m�[�h��NULL
+		// 最後のノードはNULL
 		TEST_METHOD(back_added)
 		{
 			list l;
+			initialize_list(&l);
 			add_back(&l, 1);
 
 			Assert::AreEqual(1, l.tail->data);
@@ -40,10 +42,11 @@ namespace UnitTest
 			delete_all(&l);
 		}
 
-		// �ŏ��̑O�m�[�h��NULL
+		// 最初の前ノードはNULL
 		TEST_METHOD(next_get)
 		{
 			list l;
+			initialize_list(&l);
 			add_front(&l, 1);
 			add_back(&l, 2);
 
@@ -52,10 +55,11 @@ namespace UnitTest
 			delete_all(&l);
 		}
 
-		// �ŏ��̑O�m�[�h��NULL
+		// 最初の前ノードはNULL
 		TEST_METHOD(prev_get)
 		{
 			list l;
+			initialize_list(&l);
 			add_front(&l, 1);
 			add_back(&l, 2);
 
@@ -65,15 +69,16 @@ namespace UnitTest
 		}
 
 
-		// �ŏ��̑O�m�[�h��NULL
+		// 最初の前ノードはNULL
 		TEST_METHOD(middle_node_depended)
 		{
 			list l;
+			initialize_list(&l);
 			add_front(&l, 1);
 			add_back(&l, 2);
 			add_back(&l, 3);
 
-			depend(get_prev(l.tail) , &l);// �^�񒆂̗v�f���폜
+			depend(get_prev(l.tail) , &l);// 真ん中の要素を削除
 
 			node* p = l.head;
 			Assert::AreEqual(1, p->data);
