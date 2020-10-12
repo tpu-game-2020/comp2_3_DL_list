@@ -82,7 +82,7 @@ node* depend(node* p, list* l)
 		p->next->prev = p->prev;
 	}
 	else {
-		p = p->prev;
+		l->tail = p;
 	}
 
 	free(p);
