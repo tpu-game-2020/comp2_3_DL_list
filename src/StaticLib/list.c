@@ -85,6 +85,7 @@ node* depend(node* p, list* l)
 		l->tail = p;
 	}
 
+
 	free(p);
 
 	// ToDo: pをリストから取り外す
