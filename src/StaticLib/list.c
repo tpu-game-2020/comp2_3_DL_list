@@ -45,7 +45,7 @@ void add_back(list* l, int data)
 		p->prev->next = p;
 	}
 	else {
-		l->tail = p;
+		l->head = p;
 
 	}
 }
