@@ -12,13 +12,13 @@ void add_front(list* l, int data)
 	{
 		return;
 	}
-	
+
 	p->data = data;
 	p->next = l->head;
 	p->prev = NULL;
 
 	l->head = p;
-	
+
 	if (p->next != NULL)
 	{
 		p->next->prev = p;
@@ -131,4 +131,3 @@ void initialize_list(list* l)
 {
 	l->head = l->tail = NULL;
 }
-
