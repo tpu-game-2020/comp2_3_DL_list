@@ -104,4 +104,3 @@ void initialize_list(list* l)
 {
 	l->head = l->tail = NULL;
 }
-
