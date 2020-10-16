@@ -98,7 +98,7 @@ node* depend(node* p, list* l)
 void delete_all(list* l)
 {
 	node* p = l->head;
-	if (p == NULL) {
+	while (p!= NULL) {
 		node* n = p->next;
 		free(p);
 		p = n;
