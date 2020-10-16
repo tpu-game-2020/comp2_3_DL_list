@@ -99,7 +99,7 @@ void delete_all(list* l)
 {
 	node* p = l->head;
 	if (p == NULL) {
-		node *n = p->next;
+		node* n = p->next;
 		free(p);
 		p = n;
 	}
