@@ -7,7 +7,7 @@
 実装して、ユニットテストが通るようにしてください。
 
 
-[![Actions Status](https://github.com/tpu-game-2020/comp2_3_DL_list/workflows/MSTest/badge.svg)](https://github.com/tpu-game-2020/comp2_3_DL_list/actions)　
+[![Actions Status](https://github.com/isigurohatune/comp2_3_DL_list/workflows/MSTest/badge.svg)](https://github.com/isigurohatune/comp2_3_DL_list/actions)　
 
 （このファイルの上の行の[tpu-game-2020]の部分(2か所)を自分のアカウント名に修正してください）
 
@@ -21,3 +21,4 @@
 * 更新内容をコミットしてください
 * コミットした結果をGitHubにプッシュしてください
 * 本リポジトリにプルリクエストをしてください
+
