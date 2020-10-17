@@ -8,9 +8,7 @@ void add_front(list* l, int data)
 {
 	// ToDo: headにdataの値を持つノードを追加する
 	node* p = (node*)malloc(sizeof(node));
-	if (p == NULL) {
-		return;
-	}
+	if (p == NULL) return;
 
 	p->data = data;
 	p->next = l->head;
@@ -20,8 +18,9 @@ void add_front(list* l, int data)
 	if (p->next != NULL) {
 		p->next->prev = p;
 	}
-	else l->tail = p;
-
+	else {
+		l->tail = p;
+	}
 }
 
 //
@@ -31,9 +30,7 @@ void add_back(list* l, int data)
 {
 	// ToDo: tailにdataの値を持つノードを追加する
 	node* p = (node*)malloc(sizeof(node));
-	if (p == NULL) {
-		return;
-	}
+	if (p == NULL) return;
 
 	p->data = data;
 	p->next = NULL;
@@ -43,8 +40,9 @@ void add_back(list* l, int data)
 	if (p->prev != NULL) {
 		p->prev->next = p;
 	}
-	else l->head = p;
-
+	else {
+		l->head = p;
+	}
 }
 
 //
