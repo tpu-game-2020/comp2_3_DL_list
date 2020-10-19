@@ -11,6 +11,7 @@ void add_front(list* l, int data)
 	node* p = (node*)malloc(sizeof(node));
 	if (p == NULL)return;
 
+
 	p->data = data;
 	p->next = l->head;
 	p->prev = NULL;
