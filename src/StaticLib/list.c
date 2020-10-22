@@ -40,7 +40,7 @@ void add_back(list* l, int data)
 		p->prev->next = p;
 	}
 	else {
-		l->tail = p;
+		l->head = p;
 	}
 	// ToDo: tailにdataの値を持つノードを追加する
 }
@@ -75,7 +75,7 @@ node* depend(node* p, list* l)
 		
 	}
 	else {
-		p = p->next;
+		l->head = p->next;
 	}
 
 	if (p->next != NULL) {
@@ -99,6 +99,7 @@ node* depend(node* p, list* l)
 void delete_all(list* l)
 {
 	node* p = l->head;
+
 	while (p != NULL) {
 		node* n = p->next;
 		free(p);
